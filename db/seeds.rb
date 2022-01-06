@@ -50,3 +50,8 @@ end
 
 
 puts "PERSONS!"
+
+
+# Person.joins(:address).where(addresses: {name: "3811 Ethan Ranch"}) => retorna todas as pessoas que moram no 3811 Ethan Ranch
+# Person.joins(address: :city).where(cities: {name: 'Lake Ranee'})=> retorna todas as pessoas que moram na cidade Lake Ranee
+# Person.joins(address: {city: :state}).where(states: {name: 'AK'}) => retorna todas as pessoas que moram no estado AK
